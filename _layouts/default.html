@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="DuckDaily" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">跳转正文</a>
+  <header class="site-header wrapper">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="DuckDaily 首页"><span class="logo" aria-hidden="true">D<span>·</span></span>DuckDaily</a>
+    <nav aria-label="主导航"><a href="{{ '/archive/' | relative_url }}">日报归档</a><a href="{{ '/about/' | relative_url }}">关于</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
+  </header>
+  <main id="main" class="wrapper">{{ content }}</main>
+  <footer class="wrapper site-footer"><p>DuckDaily · 非官方 DuckDB 中文社区观察</p><p>公开资料 · 自动整理 · 原始来源可追溯</p><a href="https://github.com/Damon07/duckdaily">GitHub 仓库 ↗</a></footer>
+</body>
+</html>

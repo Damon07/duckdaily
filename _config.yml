@@ -1,0 +1,17 @@
+title: DuckDaily
+description: 每天读懂 DuckDB 社区动向
+url: "https://damon07.github.io"
+baseurl: "/duckdaily"
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /daily/:year/:month/:day/
+future: false
+strict_front_matter: true
+exclude: [README.md, PUBLISHING.md, Gemfile, Gemfile.lock, scripts, vendor]
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
